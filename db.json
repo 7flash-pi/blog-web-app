@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": "1688809197195",
+      "content": "sifuuu ji samay accha hai",
+      "time": "2023-07-08"
+    },
+    {
+      "id": "1688809443442",
+      "content": "sifuuu ji ",
+      "time": "2023-07-08"
+    },
+    {
+      "id": "1688809549352",
+      "content": "ashish",
+      "time": "2023-07-08"
+    },
+    {
+      "id": "1688809643857",
+      "content": "new blog",
+      "time": "2023-07-08"
+    },
+    {
+      "id": "1688809651917",
+      "content": "sifu ji",
+      "time": "2023-07-08"
+    },
+    {
+      "id": "1688811195284",
+      "content": "hello",
+      "time": "2023-07-08"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "sifu",
+      "password": "sifu123"
+    }
+  ]
+}
