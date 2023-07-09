@@ -1,34 +1,10 @@
 {
   "posts": [
     {
-      "id": "1688809197195",
-      "content": "sifuuu ji samay accha hai",
-      "time": "2023-07-08"
-    },
-    {
-      "id": "1688809443442",
-      "content": "sifuuu ji ",
-      "time": "2023-07-08"
-    },
-    {
-      "id": "1688809549352",
-      "content": "ashish",
-      "time": "2023-07-08"
-    },
-    {
-      "id": "1688809643857",
+      "title": "kuch bhi",
+      "id": "1688893910441",
       "content": "new blog",
-      "time": "2023-07-08"
-    },
-    {
-      "id": "1688809651917",
-      "content": "sifu ji",
-      "time": "2023-07-08"
-    },
-    {
-      "id": "1688811195284",
-      "content": "hello",
-      "time": "2023-07-08"
+      "time": "2023-07-09"
     }
   ],
   "users": [

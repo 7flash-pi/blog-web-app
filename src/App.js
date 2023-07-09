@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="app flex justify-center items-center">
+    <div className="app flex justify-center items-center" id='app'>
      
     <HomePage />
       

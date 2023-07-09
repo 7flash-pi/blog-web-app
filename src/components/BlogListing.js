@@ -1,32 +1,57 @@
-import React , {useEffect, useState} from 'react'
-import SingleBlog from './SingleBlog'
-import { deleteBlogFromDb, getBlogFromDb } from '../utilities/request'
+import React, { useEffect, useState } from "react";
+import SingleBlog from "./SingleBlog";
+import { deleteBlogFromDb, getBlogFromDb } from "../utilities/request";
+import InfoModal from "./InfoModal";
 
 const BlogListing = () => {
-    const [blog, setBlog] = useState([]);
-    useEffect(()=>{
-        getBlogFromDb()
-        .then((data)=>{
-            setBlog(data?.data);
-        })
-        
-    },[])
+  const [blog, setBlog] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const deleteBlog=(item) => {
-        // if(item){
-        //     deleteBlogFromDb(item?.id);
-        // }
+  useEffect(() => {
+    getBlogFromDb().then((data) => {
+      setBlog(data?.data);
+    });
+  }, []);
+
+  const deleteBlog = (item) => {
+    if (item) {
+      deleteBlogFromDb(item?.id).then((d) => {
+        console.log("deleted", d);
+      });
     }
-  return (
-    <div className='flex  flex-col gap-4 max-h-[400px] overflow-scroll hide'>
-        {
-            (blog?.map((item,index)=>(
-                <SingleBlog content={item?.content} time={item?.time} key={index} onDelete={()=>{deleteBlog(item)}}  />
-            ))) 
-           
-        }
-    </div>
-  )
-}
+    window.location.reload();
+  };
 
-export default BlogListing
+  const openModal = () => {
+    setIsOpen(true)
+  };
+  const closeModal = () => {
+    setIsOpen(false)
+    
+  };
+
+  return (
+    <div
+      className="flex  flex-col gap-4 max-h-[400px] overflow-scroll hide"
+      onClick={openModal}
+    >
+      {blog &&
+        blog?.map((item, index) => (
+          <div key={index}>
+            <SingleBlog
+              content={item?.content}
+              time={item?.time}
+              title={item?.title}
+             
+              onDelete={() => {
+                deleteBlog(item);
+              }}
+            />
+            <InfoModal closeModal={closeModal} isOpen={isOpen}  item={item}/>
+          </div>
+        ))}
+    </div>
+  );
+};
+
+export default BlogListing;

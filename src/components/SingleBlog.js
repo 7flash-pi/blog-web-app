@@ -1,10 +1,10 @@
 import React from 'react'
 import {AiFillDelete} from 'react-icons/ai'
 
-const SingleBlog = ({content,time,onDelete}) => {
+const SingleBlog = ({content,time,onDelete,title}) => {
   return (
-    <div className='flex flex-col p-4 bg-gray-500 rounded-lg mt-4'>
-     
+    <div className='flex flex-col p-4 bg-gray-500 rounded-lg mt-4' id='main'>
+       <h2 className='text-4xl text-[#B2DFEE]'>{title}</h2>
      <div className='flex flex-col py-2'>
         <p className='text-xl text-white'>{content}</p>
         <p className='opacity-40 text-sm text-white'>{time}</p>

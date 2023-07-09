@@ -16,6 +16,6 @@ export const getBlogFromDb= () =>{
 
 export const deleteBlogFromDb= (id) =>{
 
-    return axios.delete(`BLOGURl/${id}`);
+    return axios.delete(`${BLOGURl}/${id}`);
 
 }
